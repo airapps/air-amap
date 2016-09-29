@@ -30,7 +30,7 @@ extern const CGFloat AMapZoomBoundBuffer;
 
 @property (nonatomic, strong) SMCalloutView *calloutView;
 
-@property (nonatomic, assign) MAMapView *mapView;
+@property (nonatomic, strong) MAMapView *mapView;
 
 @property (nonatomic, strong) NSString *apiKey;
 
