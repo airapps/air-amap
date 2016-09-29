@@ -19,6 +19,7 @@
 #import "AMapPolygon.h"
 #import "AMapCircle.h"
 
+
 static NSString *const RCTMapViewKey = @"AMapView";
 
 const CLLocationDegrees AMapDefaultSpan = 0.005;
@@ -103,8 +104,8 @@ const CGFloat AMapZoomBoundBuffer = 0.01;
 }
 
 - (void) createMap {
-    [MAMapServices sharedServices].apiKey = _apiKey;
-    [AMapSearchServices sharedServices].apiKey = _apiKey;
+    [AMapServices sharedServices].apiKey = _apiKey;
+//    [AMapSearchServices sharedServices].apiKey = _apiKey;
     _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
 
     // MAMapView doesn't report tap events, so we attach gesture recognizers to it

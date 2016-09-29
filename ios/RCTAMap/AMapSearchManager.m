@@ -10,8 +10,8 @@
 #import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 #import "RCTViewManager.h"
-#import <MAMapKit/MAMapURLSearchType.h>
-#import <MAMapKit/MAMapServices.h>
+#import <AMapFoundationKit/AMapURLSearchType.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <objc/runtime.h>
 
@@ -34,15 +34,15 @@ RCT_EXPORT_MODULE();
 - (NSDictionary *)constantsToExport
 {
     return @{ @"DrivingStrategy": @{
-                      @"Fastest":                           @(MADrivingStrategyFastest), //速度最快
-                      @"MinFare":                           @(MADrivingStrategyMinFare), //避免收费
-                      @"Shortest":                          @(MADrivingStrategyShortest), //距离最短
-                      @"NoHighways":                        @(MADrivingStrategyNoHighways), //不走高速
-                      @"AvoidCongestion":                   @(MADrivingStrategyAvoidCongestion) , //躲避拥堵
-                      @"AvoidHighwaysAndFare":              @(MADrivingStrategyAvoidHighwaysAndFare), //不走高速且避免收费
-                      @"AvoidHighwaysAndCongestion":        @(MADrivingStrategyAvoidHighwaysAndCongestion), //不走高速且躲避拥堵
-                      @"AvoidFareAndCongestion":            @(MADrivingStrategyAvoidFareAndCongestion), //躲避收费和拥堵
-                      @"AvoidHighwaysAndFareAndCongestion": @(MADrivingStrategyAvoidHighwaysAndFareAndCongestion) //不走高速躲避收费和拥堵
+                      @"Fastest":                           @(AMapDrivingStrategyFastest), //速度最快
+                      @"MinFare":                           @(AMapDrivingStrategyMinFare), //避免收费
+                      @"Shortest":                          @(AMapDrivingStrategyShortest), //距离最短
+                      @"NoHighways":                        @(AMapDrivingStrategyNoHighways), //不走高速
+                      @"AvoidCongestion":                   @(AMapDrivingStrategyAvoidCongestion) , //躲避拥堵
+                      @"AvoidHighwaysAndFare":              @(AMapDrivingStrategyAvoidHighwaysAndFare), //不走高速且避免收费
+                      @"AvoidHighwaysAndCongestion":        @(AMapDrivingStrategyAvoidHighwaysAndCongestion), //不走高速且躲避拥堵
+                      @"AvoidFareAndCongestion":            @(AMapDrivingStrategyAvoidFareAndCongestion), //躲避收费和拥堵
+                      @"AvoidHighwaysAndFareAndCongestion": @(AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion) //不走高速躲避收费和拥堵
                       }};
 }
 
@@ -80,7 +80,7 @@ RCT_EXPORT_MODULE();
 
 
 RCT_EXPORT_METHOD(setApiKey:(NSString *)apiKey){
-    [MAMapServices sharedServices].apiKey = apiKey;
+    [AMapServices sharedServices].apiKey = apiKey;
 }
 
 

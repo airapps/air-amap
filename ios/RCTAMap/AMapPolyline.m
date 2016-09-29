@@ -69,11 +69,11 @@
     _renderer.fillColor = _fillColor;
     _renderer.strokeColor = _strokeColor;
     _renderer.lineWidth = _strokeWidth;
-    _renderer.lineCap = _lineCap;
-    _renderer.lineJoin = _lineJoin;
+//    _renderer.lineCap = _lineCap;
+//    _renderer.lineJoin = _lineJoin;
     _renderer.miterLimit = _miterLimit;
-    _renderer.lineDashPhase = _lineDashPhase;
-    _renderer.lineDashPattern = _lineDashPattern;
+//    _renderer.lineDashPhase = _lineDashPhase;
+//    _renderer.lineDashPattern = _lineDashPattern;
 
     if (_map == nil) return;
     [_map.mapView removeOverlay:self];
@@ -95,8 +95,9 @@
 
 - (BOOL)intersectsMapRect:(MAMapRect)mapRect
 {
-    BOOL answer = [self.polyline intersectsMapRect:mapRect];
-    return answer;
+//    BOOL answer = [self.polyline intersectsMapRect:mapRect];
+//    return answer;
+    return NO;
 }
 
 - (BOOL)canReplaceMapContent

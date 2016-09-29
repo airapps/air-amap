@@ -7,9 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <MAMapKit/MAMapKit.h>
 #import <UIKit/UIKit.h>
-#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 #import "RCTConvert+AMapKit.h"
 #import "AMap.h"
 #import "RCTComponent.h"
