@@ -104,7 +104,7 @@ const CGFloat AMapZoomBoundBuffer = 0.01;
 }
 
 - (void) createMap {
-    [AMapServices sharedServices].apiKey = _apiKey;
+//    [AMapServices sharedServices].apiKey = _apiKey;
 //    [AMapSearchServices sharedServices].apiKey = _apiKey;
     _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
 
