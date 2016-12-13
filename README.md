@@ -1,3 +1,8 @@
+# A fork of react-native-amap
+
+- match react native high version
+- match amap high version 
+
 # react-native-amap
 React Native AMap component for iOS + Android
 
@@ -9,7 +14,7 @@ React Native AMap component for iOS + Android
 
 ### Installation
 
-`npm install react-native-amap-view --save`
+`npm install air-amap --save`
 
 ### Docs
 
